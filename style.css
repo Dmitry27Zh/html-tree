@@ -1,0 +1,21 @@
+.progress {
+  background-color: black;
+}
+
+.progress.active .progress__c {
+  stroke-dasharray: 190 190;
+}
+
+.progress__b {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.progress__c {
+  stroke-dasharray: 0 190;
+  transition: stroke-dasharray 16s;
+}
+
+.anim-el {
+  transition: all 0.4s ease-in;
+}
