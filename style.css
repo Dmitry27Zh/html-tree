@@ -1,21 +1,59 @@
-.progress {
-  background-color: black;
+html {
+  height: 100%;
 }
 
-.progress.active .progress__c {
-  stroke-dasharray: 190 190;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
-.progress__b {
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.progress__c {
-  stroke-dasharray: 0 190;
-  transition: stroke-dasharray 16s;
+.part {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  background-color: green;
+  overflow: hidden;
 }
 
-.anim-el {
-  transition: all 0.4s ease-in;
+.part::before,
+.part::after {
+  position: absolute;
+  bottom: 5px;
+  width: 100px;
+  height: 200px;
+  background-color: white;
+  content: "";
+}
+
+.part::before {
+  left: -20px;
+  transform: rotate(45deg);
+}
+
+.part::after {
+  right: -20px;
+  transform: rotate(-45deg);
+}
+
+.part-mid {
+  transform: scale(1.2);
+}
+
+.part-bottom {
+  top: 30px;
+  transform: scale(1.4);
+}
+
+.trunk {
+  width: 50px;
+  height: 100px;
+  background-color: brown;
 }
